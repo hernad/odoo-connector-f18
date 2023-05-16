@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_f18_backend","f18_backend connector manager","model_f18_backend","connector.group_connector_manager",1,1,1,1
+"access_f18_backend_user","f18_backend user","model_f18_backend","base.group_user",1,0,0,0
+"access_f18_database_login_manager","access_f18_database_login manager","connector-f18.model_f18_backend_login","connector.group_connector_manager",1,1,1,1
+"access_f18_database_login","access_f18_database_login user","connector-f18.model_f18_backend_login","base.group_user",1,0,0,0

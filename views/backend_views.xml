@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright 2022 Camptocamp SA
+  Copyright 2019 Brainbean Apps (https://brainbeanapps.com)
+  License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+-->
+<odoo>
+    <!-- Backend -->
+    <record id="view_f18_backend_form" model="ir.ui.view">
+        <field name="name">f18.backend.form</field>
+        <field name="model">f18.backend</field>
+        <field name="arch" type="xml">
+            <form string="F18 Backend">
+                <header groups="connector.group_connector_manager">
+                 
+                    <button
+                        string="F18 DB login test"
+                        name="%(action_f18_backend_login)d"
+                        type="action"
+                        
+                        states="config,ok"
+                    />
+                    <field name="state" widget="statusbar" />
+                </header>
+  
+            </form>
+        </field>
+    </record>
+
+    <record id="view_f18_backend_tree" model="ir.ui.view">
+        <field name="name">f18.backend.tree</field>
+        <field name="model">f18.backend</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="host_name" />
+                <field name="user_name" />
+                <field name="database" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_f18_backend" model="ir.actions.act_window">
+        <field name="name">F18 Backends</field>
+        <field name="res_model">f18.backend</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_f18_backend"
+        name="Backends"
+        parent="menu_f18_root"
+        action="action_f18_backend"
+    />
+</odoo>

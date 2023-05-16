@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="menu_f18_root"
+        parent="connector.menu_connector_root"
+        name="F18"
+        sequence="50"
+        groups="connector.group_connector_manager"
+    />
+</odoo>
